@@ -14,22 +14,25 @@
     }
     img {
       width: 100%;
-      height: 240px;
+      height: 260px;
       object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-900">
 
   <!-- HEADER -->
-  <header class="bg-white shadow sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold text-emerald-700">Santa Rosalia Retreat</h1>
-      <div class="flex gap-4">
-        <button onclick="switchLang('en')" class="lang-btn">🇬🇧 EN</button>
-        <button onclick="switchLang('nl')" class="lang-btn">🇳🇱 NL</button>
-        <button onclick="switchLang('fr')" class="lang-btn">🇫🇷 FR</button>
-        <button onclick="switchLang('es')" class="lang-btn">🇪🇸 ES</button>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-emerald-700">Santa Rosalia Retreat</h1>
+      
+      <div class="flex gap-3 text-lg">
+        <button onclick="switchLang('en')" class="lang-btn px-4 py-2 hover:bg-gray-100 rounded-lg">🇬🇧 EN</button>
+        <button onclick="switchLang('nl')" class="lang-btn px-4 py-2 hover:bg-gray-100 rounded-lg">🇳🇱 NL</button>
+        <button onclick="switchLang('fr')" class="lang-btn px-4 py-2 hover:bg-gray-100 rounded-lg">🇫🇷 FR</button>
+        <button onclick="switchLang('es')" class="lang-btn px-4 py-2 hover:bg-gray-100 rounded-lg">🇪🇸 ES</button>
       </div>
     </div>
   </header>
@@ -37,29 +40,43 @@
   <!-- HERO -->
   <section id="hero" class="hero h-screen flex items-center text-white">
     <div class="max-w-6xl mx-auto px-6 text-center">
-      <h2 data-lang="en" class="text-5xl md:text-6xl font-bold mb-4">Luxury Villa in Santa Rosalia</h2>
-      <h2 data-lang="nl" class="hidden text-5xl md:text-6xl font-bold mb-4">Luxe Villa in Santa Rosalia</h2>
-      <h2 data-lang="fr" class="hidden text-5xl md:text-6xl font-bold mb-4">Villa de Luxe à Santa Rosalia</h2>
-      <h2 data-lang="es" class="hidden text-5xl md:text-6xl font-bold mb-4">Villa de Lujo en Santa Rosalia</h2>
+      <h2 data-lang="en" class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Luxury Villa in Santa Rosalia</h2>
+      <h2 data-lang="nl" class="hidden text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Luxe Villa in Santa Rosalia</h2>
+      <h2 data-lang="fr" class="hidden text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Villa de Luxe à Santa Rosalia</h2>
+      <h2 data-lang="es" class="hidden text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg">Villa de Lujo en Santa Rosalia</h2>
     </div>
   </section>
 
   <!-- GALLERY -->
-  <section class="max-w-6xl mx-auto px-6 py-16">
-    <h2 data-lang="en" class="text-4xl font-bold text-center mb-12">Photo Gallery</h2>
-    <h2 data-lang="nl" class="hidden text-4xl font-bold text-center mb-12">Fotogalerij</h2>
-    <h2 data-lang="fr" class="hidden text-4xl font-bold text-center mb-12">Galerie Photos</h2>
-    <h2 data-lang="es" class="hidden text-4xl font-bold text-center mb-12">Galería de Fotos</h2>
+  <section class="max-w-6xl mx-auto px-6 py-16 bg-gray-50">
+    <h2 data-lang="en" class="text-4xl font-bold text-center mb-12 text-gray-900">Photo Gallery</h2>
+    <h2 data-lang="nl" class="hidden text-4xl font-bold text-center mb-12 text-gray-900">Fotogalerij</h2>
+    <h2 data-lang="fr" class="hidden text-4xl font-bold text-center mb-12 text-gray-900">Galerie Photos</h2>
+    <h2 data-lang="es" class="hidden text-4xl font-bold text-center mb-12 text-gray-900">Galería de Fotos</h2>
     
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <img src="IMG_RS1.jpeg" onerror="this.style.display='none'" alt="Foto 1">
-      <img src="IMG_RS2.jpeg" onerror="this.style.display='none'" alt="Foto 2">
-      <img src="IMG_RS3.jpeg" onerror="this.style.display='none'" alt="Foto 3">
-      <img src="IMG_RS4.jpeg" onerror="this.style.display='none'" alt="Foto 4">
-      <img src="IMG_RS5.jpeg" onerror="this.style.display='none'" alt="Foto 5">
-      <img src="IMG_RS6.jpeg" onerror="this.style.display='none'" alt="Foto 6">
-      <img src="IMG_RS7.jpeg" onerror="this.style.display='none'" alt="Foto 7">
-      <img src="IMG_RS8.jpeg" onerror="this.style.display='none'" alt="Foto 8">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <img src="IMG_RS1.jpeg" onerror="this.style.display='none'" alt="Villa 1">
+      <img src="IMG_RS2.jpeg" onerror="this.style.display='none'" alt="Villa 2">
+      <img src="IMG_RS3.jpeg" onerror="this.style.display='none'" alt="Villa 3">
+      <img src="IMG_RS4.jpeg" onerror="this.style.display='none'" alt="Villa 4">
+      <img src="IMG_RS5.jpeg" onerror="this.style.display='none'" alt="Villa 5">
+      <img src="IMG_RS6.jpeg" onerror="this.style.display='none'" alt="Villa 6">
+      <img src="IMG_RS7.jpeg" onerror="this.style.display='none'" alt="Villa 7">
+      <img src="IMG_RS8.jpeg" onerror="this.style.display='none'" alt="Villa 8">
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="max-w-6xl mx-auto px-6 py-20 bg-emerald-600 text-white">
+    <h2 data-lang="en" class="text-4xl font-bold text-center mb-8">Book Your Stay</h2>
+    <div class="text-center">
+      <a href="https://jouw-boeking-link.com" target="_blank" 
+         class="inline-block bg-white text-emerald-700 px-12 py-6 rounded-2xl text-2xl font-semibold hover:bg-gray-100 transition">
+        <span data-lang="en">Check Availability & Book</span>
+        <span data-lang="nl" class="hidden">Beschikbaarheid & Boeken</span>
+        <span data-lang="fr" class="hidden">Vérifier & Réserver</span>
+        <span data-lang="es" class="hidden">Ver Disponibilidad y Reservar</span>
+      </a>
     </div>
   </section>
 
@@ -72,5 +89,8 @@
     switchLang('en');
   </script>
 
+  <footer class="bg-gray-900 text-white py-12 text-center">
+    <p>© 2026 Santa Rosalia Rental • Murcia, Spain</p>
+  </footer>
 </body>
 </html>
