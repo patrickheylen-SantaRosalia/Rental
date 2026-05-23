@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Santa Rosalia Luxury Rental</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    .hero { background-image: url('https://source.unsplash.com/random/1600x900/?luxury-villa-spain'); }
+    .lang-btn { cursor: pointer; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-emerald-700">Santa Rosalia Retreat</h1>
+      
+      <div class="flex gap-4">
+        <button onclick="switchLang('en')" class="lang-btn px-3 py-1 hover:bg-gray-100 rounded">🇬🇧 EN</button>
+        <button onclick="switchLang('nl')" class="lang-btn px-3 py-1 hover:bg-gray-100 rounded">🇳🇱 NL</button>
+        <button onclick="switchLang('fr')" class="lang-btn px-3 py-1 hover:bg-gray-100 rounded">🇫🇷 FR</button>
+        <button onclick="switchLang('es')" class="lang-btn px-3 py-1 hover:bg-gray-100 rounded">🇪🇸 ES</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero bg-cover bg-center h-screen flex items-center text-white">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h2 data-lang="en" class="text-5xl md:text-6xl font-bold mb-4">Luxury Villa in Santa Rosalia Lake & Life Resort</h2>
+      <h2 data-lang="nl" class="hidden text-5xl md:text-6xl font-bold mb-4">Luxe Villa in Santa Rosalia Lake & Life Resort</h2>
+      <h2 data-lang="fr" class="hidden text-5xl md:text-6xl font-bold mb-4">Villa de Luxe au Santa Rosalia Lake & Life Resort</h2>
+      <h2 data-lang="es" class="hidden text-5xl md:text-6xl font-bold mb-4">Villa de Lujo en Santa Rosalia Lake & Life Resort</h2>
+      
+      <p data-lang="en" class="text-xl mb-8">Private pool • Crystal Lagoon • Unforgettable holidays</p>
+      <p data-lang="nl" class="hidden text-xl mb-8">Privézwembad • Kristalheldere lagune • Onvergetelijke vakanties</p>
+      <p data-lang="fr" class="hidden text-xl mb-8">Piscine privée • Lagon de cristal • Vacances inoubliables</p>
+      <p data-lang="es" class="hidden text-xl mb-8">Piscina privada • Laguna de cristal • Vacaciones inolvidables</p>
+      
+      <a href="#booking" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white px-10 py-4 rounded-lg text-lg font-medium">
+        <span data-lang="en">Book Now</span>
+        <span data-lang="nl" class="hidden">Boek Nu</span>
+        <span data-lang="fr" class="hidden">Réserver</span>
+        <span data-lang="es" class="hidden">Reservar</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PROPERTY DESCRIPTION -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h2 data-lang="en" class="text-4xl font-bold text-center mb-10">Your Home Away From Home</h2>
+    <h2 data-lang="nl" class="hidden text-4xl font-bold text-center mb-10">Uw Thuis Weg Van Huis</h2>
+    <h2 data-lang="fr" class="hidden text-4xl font-bold text-center mb-10">Votre Maison Loin de Chez Vous</h2>
+    <h2 data-lang="es" class="hidden text-4xl font-bold text-center mb-10">Su Hogar Lejos de Casa</h2>
+    
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p data-lang="en" class="text-lg leading-relaxed">
+          Modern 3-bedroom villa with private heated pool in the exclusive Santa Rosalia Lake & Life Resort. 
+          Enjoy Europe's largest crystal lagoon, 24/7 security, restaurants, and world-class amenities.
+        </p>
+        <p data-lang="nl" class="hidden text-lg leading-relaxed">
+          Moderne 3-slaapkamer villa met privé verwarmd zwembad in het exclusieve Santa Rosalia Lake & Life Resort. 
+          Geniet van Europa's grootste kristalheldere lagune, 24/7 beveiliging, restaurants en topvoorzieningen.
+        </p>
+        <!-- Add similar paragraphs for FR and ES if needed -->
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <img src="https://source.unsplash.com/random/600x400/?villa-pool" class="rounded-xl shadow" alt="Pool">
+        <img src="https://source.unsplash.com/random/600x400/?lagoon" class="rounded-xl shadow" alt="Lagoon">
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 data-lang="en" class="text-4xl font-bold text-center mb-10">Gallery</h2>
+      <!-- Add more images here -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <img src="https://source.unsplash.com/random/600x400/?luxury-interior" class="rounded-xl">
+        <img src="https://source.unsplash.com/random/600x400/?spanish-resort" class="rounded-xl">
+        <img src="https://source.unsplash.com/random/600x400/?private-pool" class="rounded-xl">
+        <img src="https://source.unsplash.com/random/600x400/?sunset-spain" class="rounded-xl">
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section id="booking" class="max-w-6xl mx-auto px-6 py-20 bg-white">
+    <h2 data-lang="en" class="text-4xl font-bold text-center mb-8">Book Your Stay</h2>
+    <div class="text-center">
+      <a href="https://your-booking-link.com" target="_blank" 
+         class="inline-block bg-emerald-600 text-white px-12 py-6 rounded-2xl text-2xl font-semibold hover:bg-emerald-700 transition">
+        <span data-lang="en">Check Availability &amp; Book</span>
+        <span data-lang="nl" class="hidden">Beschikbaarheid &amp; Boeken</span>
+        <span data-lang="fr" class="hidden">Vérifier Disponibilité &amp; Réserver</span>
+        <span data-lang="es" class="hidden">Ver Disponibilidad y Reservar</span>
+      </a>
+      <p class="mt-6 text-gray-600">or contact us directly via WhatsApp / Email</p>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="max-w-6xl mx-auto px-6 py-16">
+    <h2 data-lang="en" class="text-4xl font-bold text-center mb-10">Guest Reviews</h2>
+    <div id="disqus_thread" class="max-w-3xl mx-auto"></div>
+  </section>
+
+  <!-- CHAT WIDGET PLACEHOLDER -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <button onclick="alert('Chat opening... (Replace with Tidio/Crisp/WhatsApp code)')" 
+            class="bg-emerald-600 text-white p-5 rounded-full shadow-xl hover:bg-emerald-700 transition">
+      <i class="fa fa-comment-dots text-3xl"></i>
+    </button>
+  </div>
+
+  <script>
+    // Simple language switcher
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+      });
+    }
+
+    // Default to English
+    switchLang('en');
+
+    // Disqus embed
+    (function() {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://YOUR-DISQUS-SHORTNAME.disqus.com/embed.js'; // ← Replace with your Disqus shortname
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+
+  <footer class="bg-gray-900 text-white py-12 text-center">
+    <p>© 2026 Santa Rosalia Rental • All Rights Reserved</p>
+    <p class="mt-2">Santa Rosalia Lake & Life Resort, Murcia, Spain</p>
+  </footer>
+</body>
+</html>
